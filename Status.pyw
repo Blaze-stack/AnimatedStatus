@@ -21,7 +21,7 @@ def StatusChanger():
         headers = {'authorization': token, 'user-agent': 'Mozilla/5.0 (AnimatedStatus+ Client/1.0) (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.306 Chrome/78.0.3904.130 Electron/7.1.11 Safari/537.36', 'content-type': 'application/json'}
         status = messages[counter]
         data = '{"custom_status":{"text":"' + status + '"}}'
-        session.patch('https://discordapp.com/api/v6/users/@me/settings', headers=headers, data=data)
+        session.patch('https://discordapp.com/api/v9/users/@me/settings', headers=headers, data=data)
 
         print(f'{Fore.GREEN}>{Fore.RESET} Changed To: {status}')
     except:
