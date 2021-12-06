@@ -4,7 +4,6 @@ import requests, random, time, json
 from colorama import Fore, init
 from base64 import b64decode, b64encode
 from urllib.request import Request, urlopen
-count = 0
 messages = []
 counter = 0
 lines = []
@@ -73,7 +72,6 @@ def usrgrab():
             working_ids.append(uid)
             working.append(token)
             username = user_data["username"] + "#" + str(user_data["discriminator"])
-            count =+ 1
             usr = username
             tks = token
 
