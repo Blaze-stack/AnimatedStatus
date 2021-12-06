@@ -1,4 +1,4 @@
-# import os
+import os
 import sys
 import requests, random, time, json
 from colorama import Fore, init
