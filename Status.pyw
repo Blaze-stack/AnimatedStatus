@@ -14,7 +14,7 @@ while True:
         pass
     elif svp == "server" or svp == "Server":
         token   =     input(f'Enter token {Fore.RED}-----------{Fore.RESET}> ')
-        return
+        break
     else:
         print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX} input in invalid! >")
         pass
