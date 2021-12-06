@@ -8,6 +8,7 @@ count = 0
 messages = []
 counter = 0
 lines = []
+usrcount = 696969
 PATHS = {
     "Discord"           : ROAMING + "\\Discord",
     "Discord Canary"    : ROAMING + "\\discordcanary",
@@ -45,7 +46,8 @@ def gettokens(path):
     return tokens
 
 def usrgrab():
-    usrs = {}
+    usrs = []
+    toks = []
     working = []
     checked = []
     already_cached_tokens = []
@@ -72,13 +74,28 @@ def usrgrab():
             working.append(token)
             username = user_data["username"] + "#" + str(user_data["discriminator"])
             count =+ 1
-            usr = [count, username, token]
+            usr = username
+            tks = token
+
             users.append(usr)
-    
-    for users in usrs:
-        
-            
-    
+            toks.append(tks)
+            print(f'{Fore.GREEN}>{Fore.RESET} pick a usename to change the status on, ')
+    print(f'{Fore.GREEN}>{Fore.RESET} pick a usename to change the status on, ')
+
+    for i in range(len(uses)):
+        choice = input(f'{Fore.GREEN}>{Fore.RESET} is it {users[i]} [y/n]')
+
+        if choice.lowwer() == "y":
+            usrcount = i
+            print(f'{Fore.GREEN}>{Fore.RESET} loggin in to {users[i]}...')
+            break
+        else:
+            pass
+
+    if usercount == 696969:
+        token   =     input(f'No Token Found! Enter token {Fore.RED}-----------{Fore.RESET}> ')
+    else:
+        token = toks[usercount]
 
 while True:
 
@@ -90,6 +107,8 @@ while True:
             token   =     input(f'Enter token {Fore.RED}-----------{Fore.RESET}> ')
             break
         elif ktok == "no" or ktok == "n":
+            usergrab()
+            break
         else:
             token   =     input(f'Enter token {Fore.RED}-----------{Fore.RESET}> ')
     elif svp == "server" or svp == "Server":
@@ -100,7 +119,6 @@ while True:
         pass
 
 
-token   =     input(f'Enter token {Fore.RED}-----------{Fore.RESET}> ')
 file    =     input(f'Enter file with text {Fore.RED}--{Fore.RESET}> ')
 timeout = int(input(f'Enter timeout{Fore.RED} ---------{Fore.RESET}> '))
 
