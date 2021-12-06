@@ -5,6 +5,21 @@ messages = []
 counter = 0
 lines = []
 
+
+while True:
+
+    svp     =     input(f'Running on a pc or a server? {Fore.RED}-{Fore.RED}>')
+
+    if svp == "pc" or svp == "Pc":
+        pass
+    elif svp == "server" or svp == "Server":
+        token   =     input(f'Enter token {Fore.RED}-----------{Fore.RESET}> ')
+        return
+    else:
+        print(f"{Fore.WHITE}[ {Fore.RED}- {Fore.WHITE}] {Fore.LIGHTBLACK_EX} input in invalid! >")
+        pass
+
+
 token   =     input(f'Enter token {Fore.RED}-----------{Fore.RESET}> ')
 file    =     input(f'Enter file with text {Fore.RED}--{Fore.RESET}> ')
 timeout = int(input(f'Enter timeout{Fore.RED} ---------{Fore.RESET}> '))
